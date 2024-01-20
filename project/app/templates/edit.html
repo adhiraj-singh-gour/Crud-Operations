@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp Form</title>
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+        <center><h3 style="color:red">{{msg}}</h3></center>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<center>
+					<h1>Update</h1>
+				<form action="{% url 'edit' pk=user.id %}" method="post">
+                    {% csrf_token %}
+					First Name :<input type="text" name="fname" value={{user.Firstname}}><br>
+                    Last Name  :<input type="text" name="lname" value={{user.Lastname}}><br>
+					Email :<input type="email" name="email" value={{user.Email}}><br>
+                    Contact :<input type="text" name="contact" value={{user.Contact}}><br>
+					
+					<input type="submit" value="Update">
+				</form>
+			</center>
+			</div>
+		</div>
+	</div>
+	<!-- //main -->
+</body>
+</html>
