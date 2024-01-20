@@ -1,5 +1,5 @@
 from django.db import models
-
+# first commit
 # Create your models here.
 class Student(models.Model):
     Firstname = models.CharField(max_length=100)
